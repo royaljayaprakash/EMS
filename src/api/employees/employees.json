@@ -1,0 +1,38 @@
+[
+  {
+
+  "employeeId": 18,
+  "employeeName":"Raju",
+  "joinedDate": "25 may 2019",
+  "description": "Fresher",
+  "imageUrl": "assets/images/ramu.jpg"
+  },
+  {
+    "employeeId": 15,
+  "employeeName":"Rahim",
+  "joinedDate": "07 jun 2019",
+  "description": "Fresher",
+  "imageUrl": "assets/images/raheem.jpg"
+  },
+  {
+    "employeeId": 16,
+    "employeeName":"Rekha",
+    "joinedDate": "05 apr 2019",
+    "description": "Experienced",
+    "imageUrl": "assets/images/rekha.jpg"
+  },
+  {
+    "employeeId": 21,
+    "employeeName":"Jyothirmayi",
+    "joinedDate": "17 may 2018",
+    "description": "Experienced",
+    "imageUrl": "assets/images/jyothi.jpg"
+  },
+  {
+    "employeeId": 16,
+  "employeeName":"Harish",
+  "joinedDate": "03 mar 2019",
+  "description": "Fresher",
+  "imageUrl": "assets/images/harish.jpg"
+  }
+]

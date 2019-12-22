@@ -1,0 +1,69 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Search by:</div>
+      <div class='col-md-4'>
+        <input type='text'
+               [(ngModel)]='listFilter' />
+      </div>
+    </div>
+    <div class='row'
+         *ngIf='listFilter'>
+      <div class='col-md-6'>
+        <h4>Search by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='employees && employees.length'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'
+                      (click)='toggleImage()'>
+                {{showImage ? 'Hide' : 'Show'}} Image
+              </button>
+            </th>
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <!-- <th>Description</th>
+            <th>joiend date</th> -->
+            <!-- <th>5 Star Rating</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let employee of filteredEmployees'>
+            <td>
+              <img *ngIf='showImage'
+                   [src]='employee.imageUrl'
+                   [title]='employee.productName'
+                   [style.width.px]='imageWidth'
+                   [style.margin.px]='imageMargin'>
+            </td>
+            <td>
+              <a [routerLink]="['/employees', employee.employeeId]">
+                {{ employee.employeeId }}
+              </a>
+            </td>
+            <td>{{employee.employeeName}}</td>
+            <!-- <td>{{ employee.description  }}</td>
+            <td>{{ employee.joinedDate }}</td> -->
+            <!-- <td>{{ employee.price | currency:'USD':'symbol':'1.2-2'}}</td> -->
+            <!-- <td>
+              <pm-star [rating]='product.starRating'
+                       (ratingClicked)='onRatingClicked($event)'>
+              </pm-star>
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div>
